@@ -1,4 +1,4 @@
-﻿namespace BrassRoaster.WebApi.Utility
+﻿namespace BrassRooster.WebApi.Utility
 {
     public enum UsageState
     {
