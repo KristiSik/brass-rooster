@@ -1,7 +1,7 @@
-using BrassRoaster.WebApi.Utility;
+using BrassRooster.WebApi.Utility;
 using System;
 
-namespace BrassRoaster.WebApi.Models
+namespace BrassRooster.WebApi.Models
 {
     public class Employee
     {

@@ -1,12 +1,12 @@
-﻿using BrassRoaster.WebApi.Models;
-using BrassRoaster.WebApi.Utility;
+﻿using BrassRooster.WebApi.Models;
+using BrassRooster.WebApi.Utility;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BrassRoaster.WebApi.Controllers
+namespace BrassRooster.WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

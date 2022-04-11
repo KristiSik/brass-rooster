@@ -1,6 +1,6 @@
-﻿using BrassRoaster.WebApi.Utility;
+﻿using BrassRooster.WebApi.Utility;
 
-namespace BrassRoaster.WebApi.Models
+namespace BrassRooster.WebApi.Models
 {
     public class TestServer
     {
