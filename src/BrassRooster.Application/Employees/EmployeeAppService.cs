@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BrassRooster.Application.Employees.Dtos;
 using BrassRooster.Domain.Enums;
-using BrassRooster.Domain.Models;
 using Microsoft.Extensions.Logging;
 
 namespace BrassRooster.Application.Employees
@@ -16,13 +16,13 @@ namespace BrassRooster.Application.Employees
             _logger = logger;
         }
 
-        public IEnumerable<Employee> Get()
+        public IEnumerable<EmployeeDto> Get()
         {
             _logger.LogDebug("Hello world");
 
             var rnd = new Random();
 
-            return Enumerable.Range(1, 5).Select(index => new Employee
+            return Enumerable.Range(1, 5).Select(index => new EmployeeDto
             {
                 Id = index,
                 FirstName = $"{(char)(index + 48)}",

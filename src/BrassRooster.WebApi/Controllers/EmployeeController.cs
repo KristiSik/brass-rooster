@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using BrassRooster.Application.Employees;
-using BrassRooster.Domain.Models;
+using BrassRooster.Application.Employees.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BrassRooster.WebApi.Controllers
@@ -17,7 +17,7 @@ namespace BrassRooster.WebApi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Employee> Get()
+        public IEnumerable<EmployeeDto> Get()
         {
             return _appService.Get();
         }

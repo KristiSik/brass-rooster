@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using BrassRooster.Application.TestServers;
-using BrassRooster.Domain.Models;
+using BrassRooster.Application.TestServers.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BrassRooster.WebApi.Controllers
@@ -19,7 +19,7 @@ namespace BrassRooster.WebApi.Controllers
         }
 
         [HttpGet]
-        public Task<IEnumerable<TestServer>> Get(CancellationToken cancellationToken)
+        public Task<IEnumerable<TestServerDto>> Get(CancellationToken cancellationToken)
         {
             return _testServerAppService.Get(cancellationToken);
         }
