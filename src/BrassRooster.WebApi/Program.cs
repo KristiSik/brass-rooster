@@ -3,7 +3,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using System;
 
-namespace BrassRoaster.WebApi
+namespace BrassRooster.WebApi
 {
     public class Program
     {

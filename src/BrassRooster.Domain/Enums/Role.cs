@@ -1,4 +1,4 @@
-﻿namespace BrassRoaster.WebApi.Utility
+﻿namespace BrassRooster.Domain.Enums
 {
     public enum Role
     {

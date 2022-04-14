@@ -1,12 +1,12 @@
-﻿using BrassRoaster.WebApi.Models;
-using BrassRoaster.WebApi.Utility;
+﻿using BrassRooster.WebApi.Models;
+using BrassRooster.WebApi.Utility;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BrassRoaster.WebApi.Controllers
+namespace BrassRooster.WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -22,7 +22,7 @@ namespace BrassRoaster.WebApi.Controllers
         [HttpGet]
         public IEnumerable<Employee> Get()
         {
-            Random rnd = new Random();
+            var rnd = new Random();
             return Enumerable.Range(1, 5).Select(index => new Employee
             {
                 Id = index,

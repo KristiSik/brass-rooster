@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BrassRoaster.WebApi
+namespace BrassRooster.WebApi
 {
     public class Startup
     {
