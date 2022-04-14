@@ -1,20 +1,20 @@
-﻿using BrassRooster.WebApi.Models;
-using BrassRooster.WebApi.Utility;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BrassRooster.Domain.Enums;
+using BrassRooster.Domain.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace BrassRooster.WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class EmployeesController : ControllerBase
+    public class EmployeeController : ControllerBase
     {
-        private readonly ILogger<EmployeesController> _logger;
+        private readonly ILogger<EmployeeController> _logger;
 
-        public EmployeesController(ILogger<EmployeesController> logger)
+        public EmployeeController(ILogger<EmployeeController> logger)
         {
             _logger = logger;
         }

@@ -1,4 +1,4 @@
-﻿namespace BrassRooster.Domain.Enums
+namespace BrassRooster.Domain.Enums
 {
     public enum UsageState
     {

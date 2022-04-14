@@ -1,5 +1,4 @@
 using BrassRooster.Domain.Enums;
-using System;
 
 namespace BrassRooster.Domain.Models
 {
