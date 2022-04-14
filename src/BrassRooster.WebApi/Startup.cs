@@ -1,6 +1,7 @@
 using System;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using BrassRooster.Application;
 using BrassRooster.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,6 +32,7 @@ namespace BrassRooster.WebApi
             });
 
             var container = new ContainerBuilder();
+            container.RegisterModule(new ApplicationModule());
             container.RegisterModule(new InfrastructureModule());
             container.Populate(services);
 

@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BrassRooster.Application\BrassRooster.Application.csproj" />
     <ProjectReference Include="..\BrassRooster.Infrastructure\BrassRooster.Infrastructure.csproj" />
   </ItemGroup>
 
