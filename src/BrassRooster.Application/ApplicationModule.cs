@@ -9,7 +9,8 @@ namespace BrassRooster.Application
             builder
                 .RegisterAssemblyTypes(typeof(ApplicationModule).Assembly)
                 .Where(t => t.Name.EndsWith("AppService"))
-                .AsSelf();
+                .AsSelf()
+                .InstancePerLifetimeScope();
         }
     }
 }
