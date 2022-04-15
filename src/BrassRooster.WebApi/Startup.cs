@@ -32,8 +32,8 @@ namespace BrassRooster.WebApi
             });
 
             var container = new ContainerBuilder();
-            container.RegisterModule(new ApplicationModule());
-            container.RegisterModule(new InfrastructureModule());
+            container.RegisterModule<ApplicationModule>();
+            container.RegisterModule<InfrastructureModule>();
             container.Populate(services);
 
             return new AutofacServiceProvider(container.Build());
