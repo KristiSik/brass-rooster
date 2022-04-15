@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using Autofac;
 using BrassRooster.Domain.Services;
 using BrassRooster.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 
 namespace BrassRooster.Infrastructure
@@ -22,11 +20,11 @@ namespace BrassRooster.Infrastructure
                     var serviceProvider = componentContext.Resolve<IServiceProvider>();
                     var configuration = componentContext.Resolve<IConfiguration>();
 
-                    var dbContextOptions = new DbContextOptions<BrassRoosterDbContext>(new Dictionary<Type, IDbContextOptionsExtension>());
+                    var connectionString = configuration.GetConnectionString(DbConnectionStringName).Replace(AppPathToken, AppContext.BaseDirectory);
 
-                    var optionsBuilder = new DbContextOptionsBuilder<BrassRoosterDbContext>(dbContextOptions)
+                    var optionsBuilder = new DbContextOptionsBuilder<BrassRoosterDbContext>()
                         .UseApplicationServiceProvider(serviceProvider)
-                        .UseSqlite(configuration.GetConnectionString(DbConnectionStringName).Replace(AppPathToken, AppContext.BaseDirectory));
+                        .UseSqlite(connectionString);
 
                     return optionsBuilder.Options;
                 })
