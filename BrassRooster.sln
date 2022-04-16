@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrassRooster.Domain", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrassRooster.WebApi", "src\BrassRooster.WebApi\BrassRooster.WebApi.csproj", "{ECF9ED5E-A97F-4ABB-A8D6-9559E48EC4B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrassRooster.Infrastructure", "src\BrassRooster.Infrastructure\BrassRooster.Infrastructure.csproj", "{2305429F-69CC-4FFB-885F-CE4997C01D0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrassRooster.Infrastructure", "src\BrassRooster.Infrastructure\BrassRooster.Infrastructure.csproj", "{2305429F-69CC-4FFB-885F-CE4997C01D0B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{E3AC7DE5-B62F-4FA8-9CCD-D31C8EB22EB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrassRooster.Application", "src\BrassRooster.Application\BrassRooster.Application.csproj", "{57269180-5A03-4B15-8936-48B598B668E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +121,26 @@ Global
 		{2305429F-69CC-4FFB-885F-CE4997C01D0B}.Release|x64.Build.0 = Release|Any CPU
 		{2305429F-69CC-4FFB-885F-CE4997C01D0B}.Release|x86.ActiveCfg = Release|Any CPU
 		{2305429F-69CC-4FFB-885F-CE4997C01D0B}.Release|x86.Build.0 = Release|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Debug|ARM.Build.0 = Debug|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Debug|x64.Build.0 = Debug|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Debug|x86.Build.0 = Debug|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Release|ARM.ActiveCfg = Release|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Release|ARM.Build.0 = Release|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Release|ARM64.Build.0 = Release|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Release|x64.ActiveCfg = Release|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Release|x64.Build.0 = Release|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Release|x86.ActiveCfg = Release|Any CPU
+		{57269180-5A03-4B15-8936-48B598B668E3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,6 +151,7 @@ Global
 		{ECF9ED5E-A97F-4ABB-A8D6-9559E48EC4B8} = {2FA36DE9-F045-4659-997C-C851AF8C78BB}
 		{2305429F-69CC-4FFB-885F-CE4997C01D0B} = {E3AC7DE5-B62F-4FA8-9CCD-D31C8EB22EB7}
 		{E3AC7DE5-B62F-4FA8-9CCD-D31C8EB22EB7} = {2FA36DE9-F045-4659-997C-C851AF8C78BB}
+		{57269180-5A03-4B15-8936-48B598B668E3} = {E3AC7DE5-B62F-4FA8-9CCD-D31C8EB22EB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {94DAA290-E76D-448E-B579-6575DF5AD7B3}

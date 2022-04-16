@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace BrassRooster.WebApi.Migrations
+namespace BrassRooster.Infrastructure.Persistence.Migrations
 {
     public partial class InitialCreate : Migration
     {
