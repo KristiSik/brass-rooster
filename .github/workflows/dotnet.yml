@@ -18,8 +18,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build WEB API
-      run: dotnet build --no-restore
+      run: dotnet build "src\BrassRooster.WebApi\BrassRooster.WebApi.csproj" --no-restore
     - name: Build UWP
-      run: msbuild "src\BrassRooster.WebApi\BrassRooster.WebApi.csproj" /property:Configuration=Release
+      run: msbuild "src\BrassRooster.Uwp\BrassRooster.Uwp.csproj" /property:Configuration=Release
     - name: Test
       run: dotnet test --no-build --verbosity normal
