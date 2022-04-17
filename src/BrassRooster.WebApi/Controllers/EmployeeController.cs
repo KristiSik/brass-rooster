@@ -2,6 +2,7 @@
 using BrassRooster.Application.Employees;
 using BrassRooster.Application.Employees.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace BrassRooster.WebApi.Controllers
 {
@@ -10,10 +11,12 @@ namespace BrassRooster.WebApi.Controllers
     public class EmployeeController : ControllerBase
     {
         private readonly EmployeeAppService _appService;
+        private readonly ILogger<EmployeeController> _logger;
 
-        public EmployeeController(EmployeeAppService appService)
+        public EmployeeController(EmployeeAppService appService, ILogger<EmployeeController> logger)
         {
             _appService = appService;
+            _logger = logger;
         }
 
         [HttpGet]
