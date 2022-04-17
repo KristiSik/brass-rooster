@@ -13,9 +13,13 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 5.0.x
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.1
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build
+    - name: Build WEB API
       run: dotnet build --no-restore
+    - name: Build UWP
+      run: msbuild "src\BrassRooster.WebApi\BrassRooster.WebApi.csproj" /property:Configuration=Release
     - name: Test
       run: dotnet test --no-build --verbosity normal
