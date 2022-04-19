@@ -12,36 +12,26 @@ using Microsoft.OpenApi.Models;
 
 namespace BrassRooster.WebApi
 {
-    public class Startup : IStartup
+    public class Startup
     {
-        private readonly IConfiguration _configuration;
-        private readonly IWebHostEnvironment _environment;
-
-        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
-        {
-            _configuration = configuration;
-            _environment = environment;
-        }
-
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BrassRooster.WebApi", Version = "v1" });
             });
-
-            var container = new ContainerBuilder();
-            container.RegisterModule<ApplicationModule>();
-            container.RegisterModule<InfrastructureModule>();
-            container.Populate(services);
-
-            return new AutofacServiceProvider(container.Build());
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void ConfigureContainer(ContainerBuilder builder)
         {
-            if (_environment.IsDevelopment())
+            builder.RegisterModule<ApplicationModule>();
+            builder.RegisterModule<InfrastructureModule>();
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();

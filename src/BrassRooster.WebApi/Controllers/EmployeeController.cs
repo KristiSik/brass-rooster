@@ -2,6 +2,7 @@
 using BrassRooster.Application.Employees;
 using BrassRooster.Application.Employees.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace BrassRooster.WebApi.Controllers
 {

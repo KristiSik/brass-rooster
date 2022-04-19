@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
+using Autofac.Extensions.DependencyInjection;
 using BrassRooster.Domain.Services;
-using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,7 +20,7 @@ namespace BrassRooster.WebApi
                 .CreateLogger();
             try
             {
-                IWebHost host = CreateHostBuilder(args).Build();
+                IHost host = CreateHostBuilder(args).Build();
                 await CreateDbIfNotExistsAsync(host);
                 await host.RunAsync();
             }
@@ -37,7 +37,7 @@ namespace BrassRooster.WebApi
             return 0;
         }
 
-        private static async Task CreateDbIfNotExistsAsync(IWebHost host)
+        private static async Task CreateDbIfNotExistsAsync(IHost host)
         {
             using IServiceScope scope = host.Services.CreateScope();
             IServiceProvider services = scope.ServiceProvider;
@@ -55,9 +55,13 @@ namespace BrassRooster.WebApi
             }
         }
 
-        public static IWebHostBuilder CreateHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseSerilog()
-                .UseStartup<Startup>();
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .UseServiceProviderFactory(new AutofacServiceProviderFactory())
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                })
+                .UseSerilog();
     }
 }
