@@ -11,12 +11,10 @@ namespace BrassRooster.WebApi.Controllers
     public class EmployeeController : ControllerBase
     {
         private readonly EmployeeAppService _appService;
-        private readonly ILogger<EmployeeController> _logger;
 
-        public EmployeeController(EmployeeAppService appService, ILogger<EmployeeController> logger)
+        public EmployeeController(EmployeeAppService appService)
         {
             _appService = appService;
-            _logger = logger;
         }
 
         [HttpGet]
